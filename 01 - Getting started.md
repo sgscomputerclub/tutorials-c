@@ -34,7 +34,7 @@ which you can put exactly where you copied the folder "TCC". And you're finsihed
 Buuuut, not quite. There is just one more step, I promise. This is the last one. You need an editor, something to help
 you write in the C language. I recommend Notepad++, as it is an existing recommendation of the Computer Club,
 completely free, and not too shabby an editor.
-[Here is a link](http://download.tuxfamily.org/notepadplus/6.7.3/npp.6.7.3.bin.zipinst), simply right click ->
+[Here is a link](http://download.tuxfamily.org/notepadplus/6.7.3/npp.6.7.3.bin.zip), simply right click ->
 "Extract All", and copy the resulting folder where you put "TCC" and "make.exe". That's it, your done. Completely for
 real. All you need to do to start nodepad++ is open the folder and double click "notepad++.exe" (the ".exe" part
 might not show up, but that's OK. That's just Windows trying to not scare off the none technical folk (like you and me
