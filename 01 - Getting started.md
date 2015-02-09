@@ -56,3 +56,6 @@ language. I recommed TextMate, as it is completely free and a pretty good editor
 [Here is a link](https://api.textmate.org/downloads/release). You might need to extract it, which you can do by double
 clicking. You can drag the app to your Applications folder, and you're done! You are ready to go to the next tutorial,
 located in "02 - Do you see the C?.md".
+
+## Ubuntu
+Linux? Awesome! That makes you a Real Programmer. For you, the install process is very, very simple. In fact, it is one command in the terminal. All you have to do is open a Terminal - press Control + Alt + T - and type `sudo apt-get install gcc make gedit -y`. It will ask you for your password, type it in (don't worry if it doesn't show up on the screen) and hit enter. You're done! That's it! You are ready to go to the next tutorial, located in "02 - Do you see the C?.md".
