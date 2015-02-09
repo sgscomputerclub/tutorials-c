@@ -13,7 +13,7 @@ process changes depending on what operating system you are using. So, what I'm g
 process, and you can pick whichever one is relevant to you, OK? OK! Here we go:
 
 ## Windows
-Most of you are probably using Windows, and more still are probably using the school computers, where instaling things
+Most of you are probably using Windows, and more still are probably using the school computers, where installing things
 is frowned upon by the masters. Fear not! I have a solution. First thing's first, you need a compiler. A compiler is
 something that turns what your write (called the "source code", because it's is where the program comes from, and it is
 written in code) into the program. On Windows, programs end in ".exe". I am sure you have seen these around
@@ -34,7 +34,7 @@ which you can put exactly where you copied the folder "TCC". And you're finsihed
 Buuuut, not quite. There is just one more step, I promise. This is the last one. You need an editor, something to help
 you write in the C language. I recommend Notepad++, as it is an existing recommendation of the Computer Club,
 completely free, and not too shabby an editor.
-[Here is a link](http://download.tuxfamily.org/notepadplus/6.7.3/npp.6.7.3.Installer.exe), simply right click ->
+[Here is a link](http://download.tuxfamily.org/notepadplus/6.7.3/npp.6.7.3.bin.zipinst), simply right click ->
 "Extract All", and copy the resulting folder where you put "TCC" and "make.exe". That's it, your done. Completely for
 real. All you need to do to start nodepad++ is open the folder and double click "notepad++.exe" (the ".exe" part
 might not show up, but that's OK. That's just Windows trying to not scare off the none technical folk (like you and me
