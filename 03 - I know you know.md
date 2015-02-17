@@ -287,4 +287,50 @@ switch (age) {
         break;
 ```
 
-When you hit a `case` and it matches, the program doesnt stop executing after that case. It only stops when it hits a `break`. This means that in the above code, if age is `13` it will print "Definately 13 years old
+When you hit a `case` and it matches, the program doesnt stop executing after that case. It only stops when it hits a `break`. This means that in the above code, if age is `13` it will print "Definately 13 years old", if age is `12` it will print "Definately 12 years old" and "At least 11 years old" and "At least 10 years old", if age is 11 it will print "At least 11 years old" and "At least 10 years old", and if age is 10 it will just print "At least 10 years old". This may seem complicated at first, but once it clicks it becomes very useful. Just think if it has: when you hit a `case` and it works, you keep going down from there until you hit a `break`.
+
+The final conditional in C is the `?:` conditional. It funtions very similarly to an `if` statement. It's designed to make situations like this easier to type:
+
+```c
+// this...
+int elephant = 42; // what? I dont know
+
+if (elephant % 2 == 0) {
+    elephant = 41;
+} else {
+    elephant = 43;
+}
+
+// ... turns into this!
+int elephant = 42;
+elephant = elephant % 2 == 0 ? 41 : 43;
+```
+
+Don't panic! This seems _more_ complicated, not less, but it is really very simple. It can be split into three parts, just like `if`-`else` can:
+
+```
+if (condition) {
+    if-body
+} else {
+    else-body
+}
+
+condition ? if-body : else-body;
+```
+
+This can be used whenever you want to use a value. Here is an example:
+
+```c
+// Instead of this
+if (42 > 21) {
+    char hello[5] = "Hello";
+} else {
+    char hello[7] = "Bonjour";
+}
+printf("%s\n", hello);
+
+// you can write this!
+printf("%s\n", 42 > 21 ? "Hello" : "Bonjour");
+```
+
+The `?:` conditional allows much shorter, easier to understand code in many circumstances.
