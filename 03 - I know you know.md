@@ -148,9 +148,9 @@ do {
     }
     
     number += 2;
-} while (number % 2 == 0); // this is the same as the previous example, except that the code is run once before the
-                              looping condition (the code in the while part and the middle section of for loops) is
-                              checked
+} while (number % 2 == 0);  // this is the same as the previous example, except that the code is run once before the
+                            // looping condition (the code in the while part and the middle section of for loops) is
+                            // checked
 ````
 
 That's a lot of C code! Well, let's take things slowly. First, the things that stay the same between Python and C include `while` loops, `continue` and `break`. Actually, that's quite a lot of similarity. The only real differences are `for` loops and `do`-`while` loops. `do`-`while` loops are deceptively complex. The difference between them and regular `while` loops is that the code in the body - between the curly braces - is run once before checking if it should run at all. To illustrate this, two examples:
