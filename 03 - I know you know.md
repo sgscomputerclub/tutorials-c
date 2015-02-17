@@ -193,3 +193,98 @@ while (i < 5) {
 ```
 
 It does not translate well to English, as it is simply a wrapper around a while loop - in fact, that is exactly how the compiler treats. Both those statements mean exactly the same thing.
+
+
+## Conditionals
+
+Conditionals are a very important part of pretty much any program. Without them every program would function entirely the same every time you ran it - imagine only being able to look at a singly web page in your web browser! That would suck, expecially if it wasn't his C tutorial :P. There are many different types of conditionals in C and Python, such as `for` loops in C and `while` in C and Python - they check if the condition is true or not (that's the conditional part!) and if it is they execute the body. However, they differ from other confitionals in that they keep doing it until the condition is false. Aside from `while` loops there is only one other conditional in Python: the `if`-`elif`-`else` conditional. I'm sure you have all used these before, but I will give a simple example:
+
+```python
+word = "hungry"
+if word == "thirsty":
+    print("Oh how I wish I would be executed")
+elif word == "dirty":
+    print("Hey thirsty, me too! I'll never get executed...")
+else:
+    print("Hah! Sucks for you guys. So long as in this if statement there is no option that contains 'hungry' (which there isn't) I'll be executed!")
+```
+
+In C, this would be written as:
+
+```c
+char word[] = "hungry" // using strings is fairly hard in C. We will cover this in another chapter. For now, if you want to run this example you will need to add "#include <string.h>" to the top of the file, right under the "#include <stdio.h>" that is already there
+if (strcmp(word, "thirsty") == 0) {
+    printf("Oh how I wish I would be executed\n");
+} else if (strcmp(word, "dirty") == 0) {
+    printf("Hey thirsty, me too! I'll never get executed...\n");
+} else {
+    printf("Hah! Sucks for you guys. So long as in this if statement there is no option that contains 'hungry' (which there isn't) I'll be executed!\n");
+}
+```
+
+The main difference with Python is to do with using strings. Do not worry, this will be covered in a future chapter. The only real difference is `else if` instead of `elif`.
+
+In C, however, there are two other kinds of conditionals: `switch` statements and question-mark operators, from here on refered to as `?:`. Firstly, `switch` statements. These are simplified `if` statements with a couple of different features. Here is an example:
+
+```c
+int nine = 9;
+if (nine == 7)
+    printf("Maths is broken\n");
+else if (nine == 8)
+    printf("Apparently 9 = 8\n");
+else
+    printf("Ahhh, much better\n");
+```
+
+In this you see a variable `nine` being compared to a number of different static values (meanng not variables, actual values such as `9`, `8`, `"an actual value"`). Also, as a side note, this example does not use curly braces. For `switch`es, `if`-`else` conditionals, `for`-loops, `while`-loops, and `do`-`while` loops, the curly brace can be left off if the body is a single line. This comparing can be very tiresome to type, so there is a shorter way to do it: the `switch`. Here is an example:
+
+```c
+int nine = 9;
+switch (nine) {
+    case 7:
+        printf("Maths is broken\n");
+        break;
+    case 8:
+        printf("Apparently 9 = 8\n);
+        break;
+    default:
+        printf("Ahhh, much better\n");
+}
+```
+
+This looks a little more complicated, but is much nicer to write than lots of `if`-`else if`-`else if`-`else if`-`else if`... You get the idea. One limitation of `switch`s is that it des not work for variables. For example, this would not compile:
+
+```c
+int nine = 9;
+int eight = 8;
+int seven = 7;
+switch (nine) {
+    case seven:
+        printf("Maths is broken\n");
+        break;
+    case eight:
+        printf("Apparently 9 = 8\n);
+        break;
+    default:
+        printf("Ahhh, much better\n");
+}
+```
+
+There are a couple other things that make `switch`s confusing. The first thing that catches people is the syntx - why the colons? Why no curly brace? There is a reason, and that will make sense in a couple of seconds. The second thing is all the `break`s. They mean the same they did before - once you get to one it jumps out of the `switch` completely, right to the end, and does not execute any more of the code. This is important because, otherwise, you get fall through of conditions. A lot less complicated than it sounds, I assure you. Take this example:
+
+```c
+int age = 13;
+switch (age) {
+    case 13:
+        printf("Definately 13 years old\n");
+        break;
+    case 12:
+        printf("Definately 12 years old\n");
+    case 11:
+        printf("At least 11 years old\n");
+    case 10:
+        printf("At least 10 years old\n);
+        break;
+```
+
+When you hit a `case` and it matches, the program doesnt stop executing after that case. It only stops when it hits a `break`. This means that in the above code, if age is `13` it will print "Definately 13 years old
