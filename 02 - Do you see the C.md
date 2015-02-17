@@ -27,7 +27,7 @@ This line sort of like the equivalent of `import` in Python, but not quite. For 
 int main() {
 ```
 
-This is an example of a function in C. In C, you have to declare what "type" the variable you are going to return is. the `main` function is like writing straight into a Python file. It's return type is `int` because it returns an integer indicating to the operating system whether it executed normally or crashed. A return code of `0` indicates that the program ran normally, while any other number means it crashed or other wise executed failed. Notice how the line ends in a brace? In C you delimit things with an opening and closing brace, instead of with a colon and indentation, like in Python.
+This is an example of a function in C. In C, you have to declare what "type" the variable you are going to return is. the `main` function is like writing straight into a Python file. It's return type is `int` because it returns an integer indicating to the operating system whether it executed normally or crashed. A return code of `0` indicates that the program ran normally, while any other number means it crashed or other wise executed failed. Notice how the line ends in a brace? In C you delimit things with an opening and closing brace, instead of with a colon and indentation, like in Python. Please remember that all code, if it is not defining something like a function, struct or enum (you'll learn about all those) must go in the main function. This will be left out of future examples for brevity.
 
 ```c
 printf("Hello World\n");
