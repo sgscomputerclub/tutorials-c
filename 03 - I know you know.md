@@ -245,7 +245,7 @@ switch (nine) {
         printf("Maths is broken\n");
         break;
     case 8:
-        printf("Apparently 9 = 8\n);
+        printf("Apparently 9 = 8\n");
         break;
     default:
         printf("Ahhh, much better\n");
