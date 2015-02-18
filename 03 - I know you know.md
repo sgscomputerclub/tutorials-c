@@ -334,3 +334,34 @@ printf("%s\n", 42 > 21 ? "Hello" : "Bonjour");
 ```
 
 The `?:` conditional allows much shorter, easier to understand code in many circumstances.
+
+## Classes and structs
+
+A Python feature that is very useful, particularly as your programs grow from tens of lines to thousands, tens of thousands, and beyond, is the `class`. Classes provide a method for combining `function`s and the data they are meant to work on. For example, what if you wanted to have a `Person` that could have a `name` and could `sayHello`? Well, in Python, it is very simple:
+
+```python
+class Person:
+    def __init__(self, age)
+        self.age = age
+    def sayHello(self):
+        print("Hello, I am %d years old" % self.age)
+        
+# then use it like this
+jeremy = Person(14)
+jeremy.sayHello()
+```
+This prints "Hello, my name is Jeremy". `class`es help make your code easy and understandable. Unfortunately, C was created before the idea of `class`es (under the umbrella term of Object Oriented programming) was invented. However, there exists a way to get a similar effect in C, called a `struct`. Here is how you would use it in a similar way:
+
+```c
+struct Person {
+    int age;
+}
+
+void Person_sayHello(self Person) { // this isn't how you would do it normally, we will be learning that in another chapter
+    printf("Hello, I am %d years old\n", self.age);
+}
+
+Person jeremy = {.age = 14};
+Person_sayHello(jeremy);
+```
+The main difference between  a `struct` and a `class` is that `struct`s can only have data, while `class`es can also have functions in them. In C, to model this useful behaviour we can just take the data as the first arguement.
