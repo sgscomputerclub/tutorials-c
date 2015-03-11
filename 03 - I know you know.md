@@ -256,13 +256,11 @@ This looks a little more complicated, but is much nicer to write than lots of `i
 
 ```c
 int nine = 9;
-int eight = 8;
-int seven = 7;
 switch (nine) {
-    case seven:
+    case 7:
         printf("Maths is broken\n");
         break;
-    case eight:
+    case 8:
         printf("Apparently 9 = 8\n");
         break;
     default:
